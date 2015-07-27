@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="iscroll-probe.js"></script>
+	<script type="text/javascript" src="small-iscroll.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+	<style type="text/css">
+		.wrapper{												
+			width: 300px;
+			height:300px;
+			background: #ccc;			
+		}
+		.scroller{												
+			background: #fff;		
+		}
+	</style>
+</head>
+<body ng-controller="AppController">
+	<button ng-click="limit = limit + 10">Inc</button>
+
+	<div class="wrapper" small-iscroll id="scroll" 
+	on-scroll="onScroll()"
+	on-scroll-start="onscrollstart()"
+	on-scroll-end="onscrollend('#scroll')">	
+
+		<ul class="scroller">
+			<li ng-repeat="item in items | limitTo: limit">{{item}}</li>
+		</ul>
+		
+	</div>
+</body>
+</html>
