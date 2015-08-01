@@ -16,7 +16,7 @@ Directive:
 		onScrollEnd: '&',
 		onScroll: '&'
 
-	After initialization, the IScroll instance that was created is saved to SMallIScrollInstances using the element id as key
+	After initialization, the IScroll instance that was created is saved to SmallIScrollInstances using the element id as key
 
 Service:
 	*SmallIScrollInstances
